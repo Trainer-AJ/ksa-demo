@@ -1,1 +1,2 @@
-This is master branhc file 
+This is master branch file 
+You are watching another branch... This is line1 branch name: conflict-dmeo
