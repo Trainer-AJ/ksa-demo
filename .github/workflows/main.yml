@@ -1,0 +1,23 @@
+name: Hello World Workflow
+ 
+on: 
+  push:
+    branches:
+      - master  # Trigger the workflow when there is a push to the master branch
+  pull_request:
+    branches:
+      - master  # Trigger the workflow for pull requests targeting the main branch
+ 
+jobs:
+  hello-world-job:
+    runs-on: ubuntu-latest  # The operating system for the runner
+ 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Checkout the repository's code
+ 
+      - name: Print Hello World
+        run: echo "Hello, World!"  # This prints "Hello, World!" in the Actions log
+
+      - name: ls file
+        run: ls -ltra
