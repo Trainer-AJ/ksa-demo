@@ -1,0 +1,22 @@
+# When to run ?
+name: First
+
+on: 
+    push:
+      branches:
+        - main
+        - feature-A
+    pull_request:
+      branches:
+        - main
+
+
+# Where to RUn 
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+# WHat to do ?
+    steps:
+     - name: Say Hello
+       run: echo "HI This is GH actions"
