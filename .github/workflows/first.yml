@@ -4,7 +4,7 @@ name: First
 on: 
     push:
       branches:
-        - main
+        - master
         - feature-A
     pull_request:
       branches:
