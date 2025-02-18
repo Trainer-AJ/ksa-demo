@@ -15,7 +15,7 @@ jobs:
          with: 
               client-id: ${{ secrets.APP }}
               # TenantId of the Azure Service principal created.
-              tenant-id: ${{ scerets.TENANT }}
+              tenant-id: ${{ secrets.TENANT }}
               # Azure subscriptionId
               subscription-id: ${{ secrets.SUBS }}
               # ${{ }} => refer a secret value stored in Github
