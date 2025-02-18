@@ -22,4 +22,5 @@ jobs:
               
       - name: list RG
         run: |
+           az group create -n github-actions -l eastus
            az group list 
