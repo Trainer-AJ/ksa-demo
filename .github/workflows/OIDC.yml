@@ -1,0 +1,25 @@
+name: Azure using oidc
+on: 
+  workflow_dispatch:
+
+# ------------------ Requirements by GH actions
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read  # This is required for actions/checkout
+# -------------------------------------------------------------
+jobs:
+  confirm: # first collection of tasks named as confimr
+    runs-on: ubuntu-latest
+    steps:
+      -  uses: Azure/login@v2.2.0
+         with: 
+              client-id: ${{ secrets.APP }}
+              # TenantId of the Azure Service principal created.
+              tenant-id: ${{ scerets.TENANT }}
+              # Azure subscriptionId
+              subscription-id: ${{ secrets.SUBS }}
+              # ${{ }} => refer a secret value stored in Github
+              
+      - name: list RG
+        run: |
+           az group list 
